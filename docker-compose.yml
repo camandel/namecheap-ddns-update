@@ -1,0 +1,16 @@
+version: "3.1"
+services:
+  ddns-update:
+    image: camandel/namecheap-ddns-update:latest
+    deploy:
+      replicas: 1
+    secrets:
+      - password
+    environment:
+      - DOMAIN=domain.local
+      - SUBDOMAINS=www,git
+      - INTERVAL=4h
+
+secrets:
+  password:
+    external: true 

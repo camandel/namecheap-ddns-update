@@ -1,6 +1,13 @@
 # namecheap-ddns-update
 Update the IP address of your [namecheap.com](namecheap.com) Dynamic DNS A records.
 
+Based on the work joshuamorris3 (https://github.com/joshuamorris3/namecheap-ddns-update) with these adds:
+
+* updated to alpine:latest
+* added docker-compose-yml file
+* you can set the password as a docker secret:
+`echo my-namecheap-password | docker creare secret password -`
+
 ## Overview
 Use this to update the IP address of A records for a domain that is hosted by [namecheap.com](namecheap.com). If you created one or more A records using [namecheap.com](namecheap.com) Dynamic DNS, then this will update the IP address to:
 * The IP address you pass in as an argument using -i

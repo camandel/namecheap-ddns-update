@@ -85,6 +85,11 @@ done
 shift "$((OPTIND-1))" # Shift off the options and optional --.
 
 # Check and set the password
+if [ -r /run/secrets/password ]; then
+  echo "Sourcing user ($USER) /run/secrets/password file"
+  source /run/secrets/password
+fi
+
 : "${NC_DDNS_PASS:?Need to set the Dynamic DNS Password}"
 PASS=$NC_DDNS_PASS
 
