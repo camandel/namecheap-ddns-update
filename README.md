@@ -7,7 +7,7 @@ Based on the work of joshuamorris3 (https://github.com/joshuamorris3/namecheap-d
 * added docker-compose-yml file
 * you can set the password as a docker secret:
 
-`echo my-namecheap-password | docker creare secret password -`
+`echo NC_DDNS_PASS=my-namecheap-password | docker creare secret password -`
 
 ## Overview
 Use this to update the IP address of A records for a domain that is hosted by [namecheap.com](http://namecheap.com). If you created one or more A records using [namecheap.com](http://namecheap.com) Dynamic DNS, then this will update the IP address to:
